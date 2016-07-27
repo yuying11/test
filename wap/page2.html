@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>文化旅游</title>
+		<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name='apple-touch-fullscreen' content='yes'>
+		<meta name="full-screen" content="no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="address=no" />
+		<link rel="stylesheet" type="text/css" href="asset/css/base5.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/css_filter.css" />
+		<script src="asset/plug/jquery/jquery-1.10.2.min.js"></script>
+		<script src="asset/js/common.js"></script>
+	</head>
+
+	<body>
+		<section>
+			<header class="header pr">
+				<div class="meunWrap">
+					<span class="meun"></span>
+					<div class="cb"></div>
+					<div class="pa" style="left:0;top:100px;z-index:99;">
+						<ul class="list_ul2">
+							<li><a href="#">首页</a>
+							</li>
+							<li><a href="#">新闻中心</a>
+							</li>
+							<li><a href="#">视频中心</a>
+							</li>
+							<li><a href="#">热点专题</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="searchJs">
+					<img src="asset/img/ui/logo.png" />
+				</a>
+				<a href="#" class="search"></a>
+				<div class="searchHide pa" style="left:0;top:100px;z-index:99;">
+					<input type="text" class="ipt1" name="" id="" value="" />
+					<input type="submit" class="ibut1" name="" id="" value="搜索" />
+				</div>
+			</header>
+			<section>
+				<div class="tit3">专题 | PROJECTS</div>
+				<div class="mt15">
+					<img src="asset/img/pic/pic13.jpg" />
+				</div>
+				<ul class="ul06">
+					<li><a href="#">万达集团第10个大型文旅项目落户都江堰</a>
+					</li>
+					<li><a href="#">万达启动2015年大学生创业计划</a>
+					</li>
+					<li><a href="#">万达集团2014年度工作总结</a>
+					</li>
+					<li><a href="#">武汉汉秀暨电影乐园盛大开业</a>
+					</li>
+				</ul>
+				<div class="focusWrap">
+					<div id="slideBox" class="slideBox">
+						<div class="bd">
+							<ul>
+								<li>
+									<a class="pic" href="#">
+										<img src="asset/img/pic/pic14.jpg" />
+									</a>
+									<a class="tit" href="#"><span class="intro">王健林董事长接受福布斯杂志专访</span></a>
+								</li>
+								<li>
+									<a class="pic" href="#">
+										<img src="asset/img/pic/pic13.jpg" />
+									</a>
+									<a class="tit" href="#"><span class="intro">王健林董事长接受福布斯杂志专访</span></a>
+								</li>
+								<li>
+									<a class="pic" href="#">
+										<img src="asset/img/pic/pic15.jpg" />
+									</a>
+									<a class="tit" href="#"><span class="intro">王健林董事长接受福布斯杂志专访</span></a>
+								</li>
+								<li>
+									<a class="pic" href="#">
+										<img src="asset/img/pic/pic13.jpg" />
+									</a>
+									<a class="tit" href="#"><span class="intro">王健林董事长接受福布斯杂志专访</span></a>
+								</li>
+							</ul>
+						</div>
+						<!--<div class="hd">
+							<span class="prev"><img src="images/sohu-prev.png"/></span>
+							<span class="next"><img src="images/sohu-next.png"/></span>
+						</div>-->
+					</div>
+
+					<script src="asset/plug/TouchSlide/TouchSlide.1.1.js" type="text/javascript" charset="utf-8"></script>
+					<script type="text/javascript">
+						$(document).ready(function() {
+							$(".bd li").each(function(i) {
+								var indexNum = $(this).index();
+								var totalNum = $(".bd li").length - 2;
+								var total = "<span class='num'>" + indexNum + "/" + "<i>" + totalNum + "</i></span>";
+								$(this).children(".tit").append(total);
+							})
+						})
+					</script>
+					<script type="text/javascript">
+						TouchSlide({
+							slideCell: "#slideBox",
+							mainCell: ".bd ul",
+							effect: "leftLoop"
+						});
+					</script>
+
+				</div>
+			</section>
+			<footer>
+				<div class="footLink">
+					<a href="javascript:void(0)">法律声明</a>
+					<a href="javascript:void(0)">联系方式</a>
+					<a href="javascript:void(0)" class="backtop">返回顶部</a>
+				</div>
+				<div class="copyRight">&copy;2010-2014 大连万达集团股份有限公司</div>
+			</footer>
+		</section>
+	</body>
+
+</html>

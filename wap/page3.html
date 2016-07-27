@@ -1,0 +1,1060 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>热点专题</title>
+		<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name='apple-touch-fullscreen' content='yes'>
+		<meta name="full-screen" content="no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="address=no" />
+		<link rel="stylesheet" type="text/css" href="asset/css/base5.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/css_filter.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/jplayer.blue.monday.min.css" />
+		<script src="asset/plug/jquery/jquery-1.10.2.min.js"></script>
+		<script src="asset/jplayer/jquery.jplayer.min.js" type="text/javascript"></script>
+		<script src="asset/js/common.js"></script>
+		<script>
+			window.onload = function() {
+				var username = document.cookie.split(";")[0].split("=")[1];
+
+				function setCookie(name, value) {
+					var Days = 30;
+					var exp = new Date();
+					exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+					document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+				}
+				//读取cookies 
+				function getCookie(name) {
+					var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+					if (arr = document.cookie.match(reg))
+						return unescape(arr[2]);
+					else
+						return null;
+				}
+				setCookie("appversion", "2.8");
+				var version = parseFloat(getCookie("appversion"));
+				if (!isNaN(version)) {
+					if (version < 3.1) {
+						$(".mask").show();
+					} else {
+						$(".mask").hide();
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<section>
+			<header class="header pr headerIndex">
+				<div class="meunWrap">
+					<span class="meun"></span>
+					<div class="cb"></div>
+					<div class="pa" style="left:0;top:85px;z-index:99;">
+						<ul class="list_ul2">
+							<li><a href="#">首页</a>
+							</li>
+							<li><a href="#">新闻中心</a>
+							</li>
+							<li><a href="#">视频中心</a>
+							</li>
+							<li><a href="#">热点专题</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="searchJs">
+					<img src="asset/img/ui/logo.png" />
+				</a>
+				<a href="#" class="search"></a>
+				<div class="searchHide pa" style="left:0;top:85px;z-index:99;">
+					<input type="text" class="ipt1" name="" id="" value="" />
+					<input type="submit" class="ibut1" name="" id="" value="搜索" />
+				</div>
+			</header>
+			<section class="bgf4 pt85">
+				<!----视频切换 add start---->
+				<div id="slideBox3" class="slideBox2 slideBox5 ">
+					<div class="bd bb16">
+						<ul>
+							<li>
+								<div class="pr">
+									<style type="text/css">
+										.FvideoImg img {
+											width: 100%;
+											height: 360px;
+										}
+										
+										.FvideoBut {
+											display: block;
+											width: 75px;
+											height: 75px;
+											background: url(http://image.wanda.cn/statics/images/web/icon/play1.png) no-repeat left center;
+											background-size: 75px;
+											cursor: pointer;
+											right: 50px;
+											bottom: 30px;
+											margin-left: -21px;
+											margin-top: -21px;
+										}
+									</style>
+									<div class="video pr" id="CuPlayer">
+										<video id="video1" controls="controls" poster="http://image.wanda.cn/uploadfile/2015/0803/20150803042444671.png" width="640" autobuffer="autobuffer" height="362">
+											<source src="11.mp4" type="video/mp4" />
+										</video>
+										<div class="FvideoImg pa" style="top:0;left:0;z-index:99;"><img src="http://image.wanda.cn/uploadfile/2015/0803/20150803042444671.png" /></div>
+										<span class="FvideoBut pa" style="z-index:100;"></span>
+
+									</div>
+								</div>
+								<script type="text/javascript">
+									$(function() {
+										$(".FvideoBut").click(function() {
+											var myVideo = document.getElementById("video1");
+											if (myVideo.paused) {
+												myVideo.play();
+
+												function imgHide() {
+													$("#CuPlayer .FvideoImg,#CuPlayer .FvideoBut").hide();
+												}
+												setTimeout(imgHide, 200);
+											} else {
+												myVideo.pause();
+												$("#CuPlayer .FvideoBut").removeClass("bgNone");
+											}
+										})
+									})
+								</script>
+							</li>
+							<li>
+								<a class="pic" href="#">
+									<img src="asset/img/pic/Nfmquu03203072.gif" />
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="hd">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<script src="asset/plug/TouchSlide/TouchSlide.1.1.js" type="text/javascript" charset="utf-8"></script>
+				<script type="text/javascript">
+					TouchSlide({
+						slideCell: "#slideBox3",
+						titCell: ".hd ul li",
+						mainCell: ".bd ul",
+						effect: "leftLoop",
+						autoPage: false,
+						autoPlay: true,
+						interTime: 5000
+							//					playPause();
+					});
+				</script>
+				<!----视频切换 add end---->
+
+				<div class="titl1"><a href="#" class="more">更多>></a>新闻 | NEWS</div>
+				<div class="slideBox2Wrap">
+					<div id="slideBox2" class="slideBox2">
+
+						<div class="bd">
+							<ul>
+								<li>
+									<a class="pic" href="#">
+										<img src="asset/img/pic/pic16.jpg" />
+									</a>
+									<a class="tit" href="#">美总统奥巴马会见王健林董事长</a>
+								</li>
+								<li>
+									<a class="pic" href="#">
+										<img src="asset/img/pic/pic15.jpg" />
+									</a>
+									<a class="tit" href="#">美总统奥巴马会见王健林董事长</a>
+								</li>
+								<li>
+									<a class="pic" href="#">
+										<img src="asset/img/pic/pic16.jpg" />
+									</a>
+									<a class="tit" href="#">美总统奥巴马会见王健林董事长</a>
+								</li>
+								<li>
+									<a class="pic" href="#">
+										<img src="asset/img/pic/pic16.jpg" />
+									</a>
+									<a class="tit" href="#">美总统奥巴马会见王健林董事长</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="hd">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<script src="asset/plug/TouchSlide/TouchSlide.1.1.js" type="text/javascript" charset="utf-8"></script>
+					<script type="text/javascript">
+						TouchSlide({
+							slideCell: "#slideBox2",
+							titCell: ".hd ul li",
+							mainCell: ".bd ul",
+							effect: "leftLoop",
+							autoPage: false
+						});
+					</script>
+				</div>
+				<div class="picScrollWrap">
+					<div class="picScroll picScroll_ex1">
+						<div class="tabTit mt30 js-tab cf"><a href="javascript:;" class="on">新闻动态</a><a href="javascript:;">热门视频</a><a href="javascript:;">热点专题</a></div>
+						<div class="clearfloat"></div>
+						<div class="tabCon js-tabCon">
+							<div class="bd">
+								<ul>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">1王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+								<b class="btn_more" data-onoff=0 data-url="http://www.baidu.com" data-text="进入新闻中心">加载更多</b>
+							</div>
+							<div class="bd" style="display: none;">
+								<ul>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">2王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+								<b class="btn_more" data-onoff=0 data-url="http://www.baidu.com" data-text="进入热门视频">加载更多</b>
+							</div>
+							<div class="bd" style="display: none;">
+								<ul>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">3王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="asset/img/pic/pic17.jpg" />
+											<div class="introDiv">
+												<p class="intro">王健林董事长杭州发表文化产业主题演讲</p>
+												<p class="time">2015-03-08</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+								<b class="btn_more" data-onoff=0 data-url="http://www.baidu.com" data-text="进入专题">加载更多</b>
+							</div>
+						</div>
+
+						<div class="line mt20"></div>
+						<div class="bd">
+							<!-- 微信 -->
+							<div class="wxPSW">
+								<h3><a href="#" class="more mt10">更多>></a><span class="tit_new titbs5">万达官微</span></h3>
+								<!--<div class="wxT"></div>-->
+								<div>
+									<a href="#">
+										<img src="asset/img/pic/pic20.jpg" alt="" width="260" height="195">
+										<div>
+											<p>【独家】中国赢啦！一个大胆创新，撕开了未来财富的大幕</p>
+										</div>
+										<s>万达集团</s>
+									</a>
+								</div>
+							</div>
+							<ul class="wxPSW">
+								<li>
+									<a href="#">
+										<p>【招贤】万达文化集团招聘专场！如果你有菜花<b>万达集团   2015-03-08</b></p>
+										<img src="asset/img/pic/pic20.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>【招贤】万达文化集团招聘专场！如果你有菜花</p>
+										<img src="asset/img/pic/pic20.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>【招贤】万达文化集团招聘专场！如果你有菜花</p>
+										<img src="asset/img/pic/pic20.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>【招贤】万达文化集团招聘专场！如果你有菜花</p>
+										<img src="asset/img/pic/pic20.jpg" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="line mt20"></div>
+						<div class="bd">
+							<!--page3-->
+							<ul class="moonPSW">
+								<div class="wdyk"></div>
+								<div>
+									<img src="asset/img/pic/wandamoon.jpg" alt="">
+									<h3>进军印度</h3>
+									<h4>2015年第7期</h4><span> </span>
+									<p>简介：短短24天的时间里, 董事长两次与莫迪总理会面。如此高规格的会见，如此密集的行程安排, 足见万达对印度这块古老瑰宝的珍视和重视。</p>
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="picScroll2Wrap">
+					<div class="titl1">产业 | INDUSTRIAL</div>
+					<div id="picScroll2" class="picScroll2">
+						<!--<div class="hd">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>-->
+						<div class="bd">
+							<ul>
+								<li class="li1">
+									<a href="#">
+										<img _src="asset/img/pic/pic21.jpg" />
+										<div class="introDiv">
+											<p class="tit">万达商业</p>
+											<p class="intro">109座万达广场
+												<br />71家高级酒店</p>
+										</div>
+									</a>
+								</li>
+								<li class="li2">
+									<a href="#">
+										<img _src="asset/img/pic/pic22.jpg" />
+										<div class="introDiv">
+											<p class="tit">文化旅游</p>
+											<p class="intro">中国最大的
+												<br />文化旅游企业</p>
+										</div>
+									</a>
+								</li>
+								<li class="li3">
+									<a href="#">
+										<img _src="asset/img/pic/pic23.jpg" />
+										<div class="introDiv">
+											<p class="tit">万达电商</p>
+											<p class="intro">包括万达电商
+												<br />和快钱两家公司</p>
+										</div>
+									</a>
+								</li>
+								<!--<li class="li4">
+									<a href="#">
+										<img _src="asset/img/pic/pic24.jpg" />
+										<div class="introDiv">
+											<p class="tit">连锁百货</p>
+											<p class="intro">中国最大的
+												<br />连锁百货企业</p>
+										</div>
+									</a>
+								</li>-->
+							</ul>
+<!--
+							<ul>
+								<li class="li1">
+									<a href="#">
+										<img _src="asset/img/pic/pic21.jpg" />
+										<div class="introDiv">
+											<p class="tit">万达商业</p>
+											<p class="intro">109座万达广场
+												<br />71家高级酒店</p>
+										</div>
+									</a>
+								</li>
+								<li class="li2">
+									<a href="#">
+										<img _src="asset/img/pic/pic22.jpg" />
+										<div class="introDiv">
+											<p class="tit">文化旅游</p>
+											<p class="intro">中国最大的
+												<br />文化旅游企业</p>
+										</div>
+									</a>
+								</li>
+								<li class="li3">
+									<a href="#">
+										<img _src="asset/img/pic/pic23.jpg" />
+										<div class="introDiv">
+											<p class="tit">万达电商</p>
+											<p class="intro">包括万达电商
+												<br />和快钱两家公司</p>
+										</div>
+									</a>
+								</li>
+								<li class="li4">
+									<a href="#">
+										<img _src="asset/img/pic/pic24.jpg" />
+										<div class="introDiv">
+											<p class="tit">连锁百货</p>
+											<p class="intro">中国最大的
+												<br />连锁百货企业</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul>
+								<li class="li1">
+									<a href="#">
+										<img _src="asset/img/pic/pic21.jpg" />
+										<div class="introDiv">
+											<p class="tit">万达商业</p>
+											<p class="intro">109座万达广场
+												<br />71家高级酒店</p>
+										</div>
+									</a>
+								</li>
+								<li class="li2">
+									<a href="#">
+										<img _src="asset/img/pic/pic22.jpg" />
+										<div class="introDiv">
+											<p class="tit">文化旅游</p>
+											<p class="intro">中国最大的
+												<br />文化旅游企业</p>
+										</div>
+									</a>
+								</li>
+								<li class="li3">
+									<a href="#">
+										<img _src="asset/img/pic/pic23.jpg" />
+										<div class="introDiv">
+											<p class="tit">万达电商</p>
+											<p class="intro">包括万达电商
+												<br />和快钱两家公司</p>
+										</div>
+									</a>
+								</li>
+								<li class="li4">
+									<a href="#">
+										<img _src="asset/img/pic/pic24.jpg" />
+										<div class="introDiv">
+											<p class="tit">连锁百货</p>
+											<p class="intro">中国最大的
+												<br />连锁百货企业</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+-->
+						</div>
+					</div>
+					<script type="text/javascript">
+						TouchSlide({
+							slideCell: "#picScroll2",
+							titCell: ".hd li", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+							autoPage: false, //自动分页
+							pnLoop: "false", // 前后按钮不循环
+							effect: "leftLoop",
+							switchLoad: "_src" //切换加载，真实图片路径为"_src" 
+						});
+					</script>
+				</div>
+				<div class="picScroll3Wrap">
+					<div class="titl1">生活 | INDUSTRIAL</div>
+					<div id="picScroll3" class="picScroll3">
+						<div class="hd">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<div class="bd">
+							<ul>
+								<li>
+									<a href="#" class="icon1">
+							武汉电影乐园
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon2">
+							万达电影
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon3">
+							酒店及度假村
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon4">
+							汉秀剧场
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon5">
+							飞凡网
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon6">
+							长白山国际度假村
+						</a>
+								</li>
+							</ul>
+
+							<ul>
+								<li>
+									<a href="#" class="icon1">
+							武汉电影乐园
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon2">
+							万达电影
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon3">
+							酒店及度假村
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon4">
+							汉秀剧场
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon5">
+							飞凡网
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon6">
+							长白山国际度假村
+						</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="#" class="icon1">
+							武汉电影乐园
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon2">
+							万达电影
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon3">
+							酒店及度假村
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon4">
+							汉秀剧场
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon5">
+							飞凡网
+						</a>
+								</li>
+								<li>
+									<a href="#" class="icon6">
+							长白山国际度假村
+						</a>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+					<script type="text/javascript">
+						TouchSlide({
+							slideCell: "#picScroll3",
+							titCell: ".hd li", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+							autoPage: false, //自动分页
+							pnLoop: "false", // 前后按钮不循环
+							effect: "leftLoop",
+							switchLoad: "_src" //切换加载，真实图片路径为"_src" 
+						});
+					</script>
+				</div>
+				<div class="picScroll4Wrap">
+					<div class="titl1">工具 | APP</div>
+					<div id="picScroll4" class="picScroll4">
+						<div class="hd">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<div class="bd">
+							<ul>
+								<li>
+									<img src="asset/img/ui/icon23.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+								<li>
+									<img src="asset/img/ui/icon24.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+								<li>
+									<img src="asset/img/ui/icon25.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+								<li class="bnone">
+									<img src="asset/img/ui/icon26.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+							</ul>
+
+							<ul>
+								<li>
+									<img src="asset/img/ui/icon23.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+								<li>
+									<img src="asset/img/ui/icon24.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+								<li>
+									<img src="asset/img/ui/icon25.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+								<li class="bnone">
+									<img src="asset/img/ui/icon26.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<img src="asset/img/ui/icon23.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+								<li>
+									<img src="asset/img/ui/icon24.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+								<li>
+									<img src="asset/img/ui/icon25.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+								<li class="bnone">
+									<img src="asset/img/ui/icon26.png" alt="" />
+									<div>
+										<p class="p1">万达集团</p>
+										<p class="p2">版本:2.1</p>
+										<p class="p3">
+											<a href="#">Andriod 下载</a>
+											<a href="#">iphone 下载</a>
+										</p>
+									</div>
+									<p class="p4">查询影讯：官方影讯、精准可靠。购买影票：随......</p>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+					<script type="text/javascript">
+						TouchSlide({
+							slideCell: "#picScroll4",
+							titCell: ".hd li", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+							autoPage: false, //自动分页
+							pnLoop: false, // 前后按钮不循环
+							effect: "leftLoop",
+							switchLoad: "_src" //切换加载，真实图片路径为"_src" 
+						});
+					</script>
+				</div>
+				<footer>
+					<div class="footLink">
+						<a href="javascript:void(0)">法律声明</a>
+						<a href="javascript:void(0)">联系方式</a>
+						<a href="javascript:void(0)" class="backtop">返回顶部</a>
+					</div>
+					<div class="copyRight">&copy;2010-2014 大连万达集团股份有限公司</div>
+				</footer>
+			</section>
+
+		</section>
+
+		<div class="mask">
+			<div class="maskInner">
+				<h2>版本过低此功能无法使用，请升级最新版本。</h2>
+				<div class="btnWrap">
+					<a href="javascript:void(0)" class="btn1 cancelJs">取 消</a>
+					<!--<a target="_blank" href="itms-services://?action=download-manifest&url=https://smile.wanda.cn/ctx350beta.plist" class="btn2 sureJs">确 定</a>-->
+					<a href="javascript:void(0)" class="btn2 sureJs" target="_blank">确 定</a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

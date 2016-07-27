@@ -1,0 +1,22 @@
+/*灰度/默认值：100％*/
+.grayscale {-webkit-filter:grayscale(1);}
+/*复古/默认值：100％*/
+.sepia {-webkit-filter:sepia(1);}
+/*饱和度/默认值：100％*/
+.saturate{-webkit-filter:saturate(1);}
+/*色相旋转/默认值：0deg*/
+.hue-rotate {-webkit-filter:hue-rotate(90deg);}
+/*反色/默认值：100％*/
+.invert {-webkit-filter:invert(1);}
+/*透明度/默认值：100%*/
+.opacity {-webkit-filter:opacity(.2);}
+/*亮度/默认值：100％*/
+.brightness {-webkit-filter: brightness(0.8);}
+/*对比度/默认值：100％*/
+.contrast{-webkit-filter:contrast(2);}
+/*blur模糊/默认值：0*/
+.blur {-webkit-filter:blur(3px);}
+/*drop-shadow阴影*/
+.drop-shadow {-webkit-filter:drop-shadow(0px 0px 15px #ccc);}
+/*复杂应用*/
+.all_filter {-webkit-filter: saturate(5) hue-rotate(500deg) grayscale(0.3) sepia(0.7) contrast(1.5) invert(0.2) brightness(.9);}
